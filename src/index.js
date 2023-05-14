@@ -1,1 +1,6 @@
 import "./style.css";
+
+/* ##### Pseudocode ####
+
+
+*/
