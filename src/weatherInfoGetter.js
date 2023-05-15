@@ -7,7 +7,6 @@ const weatherInfoGetter = (location) => {
       const weatherInfoJson = await response.json();
       return weatherInfoJson;
     }
-    console.log(response);
     return Promise.reject(response);
   };
 
