@@ -6,6 +6,7 @@ const weatherInfoGetter = (location) => {
     const weatherInfoJson = await weatherInfo.json();
 
     console.log(weatherInfoJson);
+    return weatherInfoJson;
   };
 
   return requestWeather();

@@ -7,5 +7,31 @@
     <script src="./main.js" defer></script>
     <title>Weather Info</title>
   </head>
-  <body></body>
+  <body>
+    <div class="main-grid grid-container">
+      <div class="title-grid grid-container">
+        <p class="title">Weather Information</p>
+      </div>
+      <div class="search-grid grid-container">
+        <label for="search-input" class="search-label hide-display"></label>
+        <input
+          type="text"
+          name="search"
+          id="search-input"
+          class="search-input"
+        />
+        <button class="search-btn">Get Weather</button>
+      </div>
+      <div class="details-grid grid-container">
+        <p class="condition">Condition</p>
+        <p class="temperature">x°</p>
+        <p class="feels-like">Feels Like: x°</p>
+        <p class="humidity">Humidity: x %</p>
+        <p class="visibility">Visibility: x miles</p>
+        <p class="wind">Wind: x mph NE</p>
+        <p class="gust">Gust: x mph</p>
+        <p class="pressure">Pressure: x in</p>
+      </div>
+    </div>
+  </body>
 </html>
