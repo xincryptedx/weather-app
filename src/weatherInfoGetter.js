@@ -1,5 +1,5 @@
-const weatherInfoGetter = (() => {
-  const requestWeather = async (location) => {
+const weatherInfoGetter = (location) => {
+  const requestWeather = async () => {
     const weatherInfo = await fetch(
       `http://api.weatherapi.com/v1/current.json?key=fc5008ce75624eafa22190524231305&q=${location}`
     );
@@ -8,7 +8,7 @@ const weatherInfoGetter = (() => {
     console.log(weatherInfoJson);
   };
 
-  return { requestWeather };
-})();
+  return requestWeather();
+};
 
 export default weatherInfoGetter;
