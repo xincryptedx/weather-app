@@ -122,6 +122,7 @@ const renderDetails = (metric = false) => {
 };
 
 // #endregion
+
 // Search for input term
 const weatherSearch = async () => {
   if (searchInput.value.trim() === "") {
