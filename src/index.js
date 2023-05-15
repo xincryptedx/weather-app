@@ -21,13 +21,11 @@ let metricToggle = false;
 
 // Search input validation
 const setSearchInputInvalid = (message) => {
-  console.log("setting validity to invalid");
   searchInput.setCustomValidity(message);
   searchInput.reportValidity();
 };
 
 const setSearchInputValid = () => {
-  console.log("valid search");
   searchInput.setCustomValidity("");
 };
 
@@ -158,6 +156,3 @@ searchInput.addEventListener("keypress", (event) => {
 });
 // Or when search btn clicked
 searchBtn.addEventListener("click", weatherSearch);
-
-// Use module in dev tools
-window.weather = getWeather;
