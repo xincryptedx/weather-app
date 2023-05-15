@@ -4,6 +4,7 @@ import getWeather from "./weatherInfoGetter";
 // References
 const searchInput = document.querySelector(".search-input");
 const searchBtn = document.querySelector(".search-btn");
+const metricCheckbox = document.querySelector(".metric-checkbox");
 const detailsGrid = document.querySelector(".details-grid");
 const conditionP = detailsGrid.querySelector(".condition");
 const temperatureP = detailsGrid.querySelector(".temperature");
@@ -16,6 +17,7 @@ const pressureP = detailsGrid.querySelector(".pressure");
 
 // Variables
 let weatherInfo;
+let metricToggle = false;
 
 // Search input validation
 const setSearchInputInvalid = (message) => {
@@ -109,19 +111,29 @@ const renderPressure = (metric = false) => {
   } else pressureP.textContent = "Pressure: n/a";
 };
 // Meta render method
-const renderDetails = (metric = false) => {
+const renderDetails = () => {
   renderSearchValue();
   renderCondition();
-  renderTemperature(metric);
-  renderFeelsLike(metric);
-  renderHumidity(metric);
-  renderVisibility(metric);
-  renderWind(metric);
-  renderGust(metric);
-  renderPressure(metric);
+  renderTemperature(metricToggle);
+  renderFeelsLike(metricToggle);
+  renderHumidity(metricToggle);
+  renderVisibility(metricToggle);
+  renderWind(metricToggle);
+  renderGust(metricToggle);
+  renderPressure(metricToggle);
 };
 
 // #endregion
+
+// Handle metric system option
+const toggleMetricSystem = () => {
+  metricToggle = metricCheckbox.checked;
+  if (weatherInfo) {
+    renderDetails(metricToggle);
+  }
+};
+// When checkbox checked
+metricCheckbox.addEventListener("change", toggleMetricSystem);
 
 // Search for input term
 const weatherSearch = async () => {
@@ -133,7 +145,6 @@ const weatherSearch = async () => {
   try {
     weatherInfo = await getWeather(searchInput.value.trim());
     setSearchInputValid();
-    console.log(weatherInfo);
     renderDetails();
   } catch (err) {
     setSearchInputInvalid("Search failed. Location not found.");
