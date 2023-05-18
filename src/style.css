@@ -200,8 +200,10 @@ body {
   grid-area: btn;
   font-size: 0.95rem;
   font-weight: bold;
-  background-color: var(--text-color);
-  color: var(--bg-color);
+  background-color: var(--bg-color-2);
+  color: var(--text-color);
+  border: 2px solid var(--highlight-color);
+  border-radius: 7px;
 }
 
 .metric-checkbox-label {
