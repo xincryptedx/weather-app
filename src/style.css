@@ -178,6 +178,7 @@ body {
   align-items: center;
 
   font-size: 2rem;
+  color: var(--highlight-color);
 }
 
 .search-grid {
@@ -191,11 +192,16 @@ body {
 
 .search-input {
   grid-area: input;
+  background-color: var(--text-color);
+  color: var(--bg-color);
 }
 
 .search-btn {
   grid-area: btn;
   font-size: 0.95rem;
+  font-weight: bold;
+  background-color: var(--text-color);
+  color: var(--bg-color);
 }
 
 .metric-checkbox-label {
