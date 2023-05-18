@@ -151,7 +151,7 @@ body {
     "search"
     "details"
     ".";
-  max-width: 600px;
+  width: 350px;
 }
 
 .title-grid {
@@ -168,6 +168,26 @@ body {
 
 .search-grid {
   grid-area: search;
+  grid-template: 1fr 1fr / 10% 1fr 1fr 5% 10%;
+  grid-template-areas:
+    ". input input input ."
+    ". btn label checkbox .";
+}
+
+.search-input {
+  grid-area: input;
+}
+
+.search-btn {
+  grid-area: btn;
+}
+
+.metric-checkbox-label {
+  grid-area: label;
+}
+
+.metric-checkbox {
+  grid-area: checkbox;
 }
 
 .details-grid {
