@@ -193,7 +193,12 @@ body {
 .search-input {
   grid-area: input;
   background-color: var(--text-color);
+  font-size: 1rem;
   color: var(--bg-color);
+  border: 2px solid var(--bg-color-3);
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .search-btn {
