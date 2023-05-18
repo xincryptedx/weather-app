@@ -174,6 +174,7 @@ body {
   grid-template-areas:
     ". input input input input ."
     ". checkbox label . btn .";
+  row-gap: 10px;
 }
 
 .search-input {
@@ -186,6 +187,8 @@ body {
 
 .metric-checkbox-label {
   grid-area: label;
+  align-self: center;
+  font-weight: bold;
 }
 
 .metric-checkbox {
