@@ -131,12 +131,24 @@ table {
 
 /* #endregion */
 
+/* Color theme */
+:root {
+  --bg-color: hsl(0, 0%, 18%);
+  --bg-color-2: hsl(0, 0%, 25%);
+  --bg-color-3: hsl(0, 0%, 43%);
+  --text-color: hsl(72, 48%, 94%);
+  --highlight-color: hsl(39, 100%, 50%);
+  --pri-1-color: hsl(96, 100%, 50%);
+  --pri-2-color: hsl(54, 100%, 50%);
+  --pri-3-color: hsl(0, 100%, 50%);
+}
+
 body {
   display: grid;
   justify-items: center;
-  background-color: black;
+  background-color: var(--bg-color);
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  color: var(--text-color);
 }
 
 .grid-container {
@@ -183,6 +195,7 @@ body {
 
 .search-btn {
   grid-area: btn;
+  font-size: 0.95rem;
 }
 
 .metric-checkbox-label {
