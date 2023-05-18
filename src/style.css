@@ -183,7 +183,7 @@ body {
 
 .search-grid {
   grid-area: search;
-  grid-template: 30px 40px/ 10% 10% 1fr 5% 1fr 10%;
+  grid-template: 45px 40px/ 10% 10% 1fr 5% 1fr 10%;
   grid-template-areas:
     ". input input input input ."
     ". checkbox label . btn .";
@@ -192,8 +192,10 @@ body {
 
 .search-input {
   grid-area: input;
+  display: flex;
+  align-items: center;
   background-color: var(--text-color);
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--bg-color);
   border: 2px solid var(--bg-color-3);
   border-radius: 5px;
