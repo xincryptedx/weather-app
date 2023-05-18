@@ -131,10 +131,15 @@ table {
 
 /* #endregion */
 
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
   display: grid;
   justify-items: center;
   background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
 
@@ -143,12 +148,13 @@ body {
 }
 
 .main-grid {
-  grid-template-rows: 5% min-content 5% min-content 1fr 5%;
+  grid-template-rows: 5% min-content 5% min-content 5% 1fr 5%;
   grid-template-areas:
     "."
     "title"
     "."
     "search"
+    "."
     "details"
     ".";
   width: calc(100% - 20px);
