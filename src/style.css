@@ -250,6 +250,7 @@ body {
 
 .feels-like {
   grid-area: feels;
+  justify-self: end;
 }
 
 .humidity {
@@ -266,8 +267,22 @@ body {
 
 .gust {
   grid-area: gust;
+  justify-self: end;
 }
 
 .pressure {
   grid-area: pressure;
+  justify-self: end;
+}
+
+@media screen and (min-width: 700px) {
+  .main-grid {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .main-grid {
+    width: 700px;
+  }
 }
