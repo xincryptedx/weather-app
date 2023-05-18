@@ -225,4 +225,44 @@ body {
 
 .details-grid {
   grid-area: details;
+  justify-self: center;
+  grid-template: 2fr 1fr 1fr 1fr / 10% 1fr 5% 1fr 10%;
+  grid-template-areas:
+    ". condition . temperature ."
+    ". humidity . feels ."
+    ". vis . pressure ."
+    " . wind . gust .";
+  width: 100%;
+}
+
+.condition {
+  grid-area: condition;
+}
+
+.temperature {
+  grid-area: temperature;
+}
+
+.feels-like {
+  grid-area: feels;
+}
+
+.humidity {
+  grid-area: humidity;
+}
+
+.visibility {
+  grid-area: vis;
+}
+
+.wind {
+  grid-area: wind;
+}
+
+.gust {
+  grid-area: gust;
+}
+
+.pressure {
+  grid-area: pressure;
 }
