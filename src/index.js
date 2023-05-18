@@ -38,7 +38,7 @@ const renderSearchValue = () => {
   if (weatherInfo.location.region) {
     searchInput.value += `, ${weatherInfo.location.region}`;
   }
-  if (weatherInfo.location.country) {
+  if (weatherInfo.location.country && weatherInfo.location.country) {
     searchInput.value += `, ${weatherInfo.location.country}`;
   }
 };
