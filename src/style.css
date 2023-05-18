@@ -151,7 +151,7 @@ body {
     "search"
     "details"
     ".";
-  width: 350px;
+  width: calc(100% - 20px);
 }
 
 .title-grid {
@@ -168,7 +168,7 @@ body {
 
 .search-grid {
   grid-area: search;
-  grid-template: 1fr 1fr / 10% 1fr 1fr 5% 10%;
+  grid-template: 30px 40px/ 10% 1fr 1fr 5% 10%;
   grid-template-areas:
     ". input input input ."
     ". btn label checkbox .";
