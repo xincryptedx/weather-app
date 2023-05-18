@@ -35,6 +35,12 @@ const renderSearchValue = () => {
   if (weatherInfo.location.name) {
     searchInput.value = weatherInfo.location.name;
   }
+  if (weatherInfo.location.region) {
+    searchInput.value += `, ${weatherInfo.location.region}`;
+  }
+  if (weatherInfo.location.country) {
+    searchInput.value += `, ${weatherInfo.location.country}`;
+  }
 };
 // Condition
 const renderCondition = () => {
