@@ -228,19 +228,24 @@ body {
   justify-self: center;
   grid-template: 2fr 1fr 1fr 1fr / 10% 1fr 5% 1fr 10%;
   grid-template-areas:
-    ". condition . temperature ."
+    ". condition condition temperature ."
     ". humidity . feels ."
     ". vis . pressure ."
     " . wind . gust .";
+  row-gap: 25px;
+  align-items: center;
   width: 100%;
 }
 
 .condition {
   grid-area: condition;
+  font-size: 1.4rem;
 }
 
 .temperature {
   grid-area: temperature;
+  font-size: 1.5rem;
+  justify-self: end;
 }
 
 .feels-like {
